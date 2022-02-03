@@ -6,18 +6,13 @@ namespace consola
     {
         static void Main(string[] args)
         {
-            string mensajeDeSalida;
-
-            mensajeDeSalida = "Hello Mora!";
-            Console.WriteLine(mensajeDeSalida);
-
-            mensajeDeSalida = "Estamos programando";
-            Console.Write(mensajeDeSalida);
-            mensajeDeSalida = Console.ReadLine();
-            Console.WriteLine("Tu mensaje es:" + mensajeDeSalida);
-            Console.ReadLine(); //Esto es una pausa
              
-            
+            MiPrimeraClase objetoMiPrimeraClase = new MiPrimeraClase();
+            objetoMiPrimeraClase.MensajeDeSalida = "Hola Mundo";
+            objetoMiPrimeraClase.Ejecutar();
+
+            Console.WriteLine("Escrito desde Program: " + objetoMiPrimeraClase.MensajeDeEntrada);
         }
     }
+    
 }
