@@ -1,0 +1,13 @@
+C:\Users\Educamosclm\proyectos\consola\bin\Debug\netcoreapp3.1\consola.exe
+C:\Users\Educamosclm\proyectos\consola\bin\Debug\netcoreapp3.1\consola.deps.json
+C:\Users\Educamosclm\proyectos\consola\bin\Debug\netcoreapp3.1\consola.runtimeconfig.json
+C:\Users\Educamosclm\proyectos\consola\bin\Debug\netcoreapp3.1\consola.runtimeconfig.dev.json
+C:\Users\Educamosclm\proyectos\consola\bin\Debug\netcoreapp3.1\consola.dll
+C:\Users\Educamosclm\proyectos\consola\bin\Debug\netcoreapp3.1\consola.pdb
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.csprojAssemblyReference.cache
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.AssemblyInfoInputs.cache
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.AssemblyInfo.cs
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.csproj.CoreCompileInputs.cache
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.dll
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.pdb
+C:\Users\Educamosclm\proyectos\consola\obj\Debug\netcoreapp3.1\consola.genruntimeconfig.cache
