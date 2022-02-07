@@ -6,11 +6,11 @@ public class MiPrimeraClase
     public string MensajeDeEntrada { get; set; }
     public void Ejecutar()
     {
-        Console.WriteLine(this.MensajeDeSalida);
+        Console.WriteLine(MensajeDeSalida);
 
-        this.MensajeDeEntrada = Console.ReadLine();
+        MensajeDeEntrada = Console.ReadLine();
 
-        Console.WriteLine (this.MensajeDeSalida + this.MensajeDeEntrada);
+        Console.WriteLine (MensajeDeSalida + MensajeDeEntrada);
         
     }
 }
