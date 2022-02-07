@@ -7,11 +7,14 @@ namespace consola
         static void Main(string[] args)
         {
              
-            MiPrimeraClase objetoMiPrimeraClase = new MiPrimeraClase();
-            objetoMiPrimeraClase.MensajeDeSalida = "Hola Mundo";
-            objetoMiPrimeraClase.Ejecutar();
+            
+            MiSegundaClase miSegundaClase = new MiSegundaClase();
+            miSegundaClase.Mensaje = "Este es el número de entrada: ";
+            miSegundaClase.NumeroEntrada = 1;
+            miSegundaClase.Incremetar();
+            miSegundaClase.Escribir();
 
-            Console.WriteLine("Escrito desde Program: " + objetoMiPrimeraClase.MensajeDeEntrada);
+            Console.ReadKey();
         }
     }
     
