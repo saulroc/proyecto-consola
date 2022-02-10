@@ -13,7 +13,7 @@ namespace consola
             
             miSegundaClase.NumeroEntrada = NUMERO_ENTRADA_INICIAL;
             miSegundaClase.IncremetarCinco();
-            miSegundaClase.PintarLetras();
+            miSegundaClase.PintarLetras2();
             miSegundaClase.Escribir();
 
             Console.WriteLine(MENSAJE_INICIAL);

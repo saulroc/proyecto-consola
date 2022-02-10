@@ -33,6 +33,15 @@ namespace consola
             }
         }
 
+        public void PintarLetras2()
+        {
+            foreach(var letra in Mensaje)
+            {
+                Console.WriteLine(letra);
+            }
+            
+        }
+
         public void IncremetarCinco()
         {
             for (int x = 1; x < 6; x++ )
