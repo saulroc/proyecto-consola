@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a0ecfe78-c95a-4121-9f67-852ede5c46be": {
+      "ProjectGuid": "a0ecfe78-c95a-4121-9f67-852ede5c46be",
+      "DisplayName": "consola",
+      "ColorIndex": 0
+    },
+    "8248f209-5079-4e13-b77d-054e6aac666a": {
+      "ProjectGuid": "8248f209-5079-4e13-b77d-054e6aac666a",
+      "DisplayName": "consola",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
