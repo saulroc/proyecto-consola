@@ -5,3 +5,4 @@ En este repositorio vamos a ir guardando los distintos ejemplos que se vayan mos
 
 * **condicionales**: los ejemplos de condicionales y de bucles
 * **markdown**: ejemplos de documentación en mark down
+* **pull request**: Rama donde vemos como se crea una pull request en git hub
