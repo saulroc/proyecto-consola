@@ -8,34 +8,31 @@ namespace consola
         const int NUMERO_ENTRADA_INICIAL = 1;
         static void Main(string[] args)
         {
-            Console.WriteLine("Introduzca un numero: ");
-            int numeroIntroducido;
-            try
+            int[] miArrayDeEnteros = new int[] { 3, 4, 5, 6, 7};
+            string[] miArrayDeCadenas = new string[] {"hola", "adios", "hasta pronto"};
+
+            Console.WriteLine("Primer entero: " + miArrayDeEnteros[0]);
+            Console.WriteLine("Quinto entero: " + miArrayDeEnteros[4]);
+            //Esta línea provocaria un error de indice fuera de rango
+            //Console.WriteLine("Quinto entero: " + miArrayDeEnteros[5]);
+            miArrayDeEnteros[0]++;
+            
+            Console.WriteLine("Primer entero: " + miArrayDeEnteros[0]);
+
+            Console.WriteLine("Primera cadena de texto: " + miArrayDeCadenas[0]);
+            Console.WriteLine("La cuarta letra de la primera cadena de texto: " + miArrayDeCadenas[0][3]);
+
+            foreach(var cadena in miArrayDeCadenas)
             {
-                numeroIntroducido = Int32.Parse(Console.ReadLine());  
-                Console.WriteLine("El numero introducido es: " + numeroIntroducido.ToString());
+                Console.WriteLine(cadena);
             }
-            catch (Exception ex)
+
+            Array.Resize(ref miArrayDeCadenas, miArrayDeCadenas.Length+1);
+            miArrayDeCadenas[miArrayDeCadenas.Length-1] = "Hasta luego";
+            Console.WriteLine("Añadimos un elemento al array: ");
+            foreach(var cadena in miArrayDeCadenas)
             {
-                Console.WriteLine("Error genérico");
-                // throw ex;
-            }
-            // catch (System.FormatException ex)
-            // {
-            //     Console.WriteLine("El valor introducido no tiene formato de número");
-            //     throw ex;
-            // }
-            // catch (System.OverflowException)
-            // {
-            //     Console.WriteLine("El número introducido es demasiado grande o demasiado pequeño");
-            // }
-            // catch(System.ArgumentNullException)
-            // {
-            //     Console.WriteLine("No ha introducido un valor");
-            // }
-            finally
-            {
-                Console.WriteLine("Esto se ejecuta siempre");
+                Console.WriteLine(cadena);
             }
             Console.ReadLine();
         }
