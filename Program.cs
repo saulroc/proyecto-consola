@@ -8,31 +8,37 @@ namespace consola
         const int NUMERO_ENTRADA_INICIAL = 1;
         static void Main(string[] args)
         {
-            int[] miArrayDeEnteros = new int[] { 3, 4, 5, 6, 7};
-            string[] miArrayDeCadenas = new string[] {"hola", "adios", "hasta pronto"};
-
-            Console.WriteLine("Primer entero: " + miArrayDeEnteros[0]);
-            Console.WriteLine("Quinto entero: " + miArrayDeEnteros[4]);
-            //Esta línea provocaria un error de indice fuera de rango
-            //Console.WriteLine("Quinto entero: " + miArrayDeEnteros[5]);
-            miArrayDeEnteros[0]++;
-            
-            Console.WriteLine("Primer entero: " + miArrayDeEnteros[0]);
-
-            Console.WriteLine("Primera cadena de texto: " + miArrayDeCadenas[0]);
-            Console.WriteLine("La cuarta letra de la primera cadena de texto: " + miArrayDeCadenas[0][3]);
-
-            foreach(var cadena in miArrayDeCadenas)
+            Console.WriteLine("Introduzca una opción: ");
+            int opcion = Int32.Parse(Console.ReadLine());
+            // if (opcion == 1)
+            // {
+            //     //hago algo
+            // }
+            // else if (opcion == 2)
+            // {
+            //     // hago otra cosa
+            // }
+            // else if (opcion == 3)
+            // {
+            //     //otra operación distinta
+            // }
+            // else
+            // {
+            //     //operación por defecto
+            // }
+            switch (opcion)
             {
-                Console.WriteLine(cadena);
-            }
-
-            Array.Resize(ref miArrayDeCadenas, miArrayDeCadenas.Length+1);
-            miArrayDeCadenas[miArrayDeCadenas.Length-1] = "Hasta luego";
-            Console.WriteLine("Añadimos un elemento al array: ");
-            foreach(var cadena in miArrayDeCadenas)
-            {
-                Console.WriteLine(cadena);
+                case 1:
+                case 3:
+                case 4:
+                    //hacer algo
+                    break;
+                case 2:
+                    // hacer otra cosa
+                    break;
+                default:
+                    // operación por defecto
+                    break;
             }
             Console.ReadLine();
         }
