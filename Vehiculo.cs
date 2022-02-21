@@ -1,10 +1,18 @@
+using System;
+
 public class Vehiculo
 {
     public string Matricula { get; set; }
+    public int LimiteMaximoDeVelocidad { get; }
+
+    public Vehiculo(int limiteMaximoDeVelocidad)
+    {
+        LimiteMaximoDeVelocidad = limiteMaximoDeVelocidad;
+    }
 
     public void Arrancar()
     {
-
+        Console.WriteLine("Bron, Bron!...");
     }
 
     public void Mover()
