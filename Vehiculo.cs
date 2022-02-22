@@ -3,6 +3,7 @@ using System;
 public class Vehiculo
 {
     public string Matricula { get; set; }
+    public string Tipo { get; set; }
     public int LimiteMaximoDeVelocidad { get; }
 
     public Vehiculo(int limiteMaximoDeVelocidad)
