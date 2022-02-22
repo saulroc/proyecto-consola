@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace consola
 {
@@ -8,37 +9,40 @@ namespace consola
         const int NUMERO_ENTRADA_INICIAL = 1;
         static void Main(string[] args)
         {
-            int opcion = 1;
-            
-            // CONDICION ? verdadero : falso;
-            string mensaje = opcion == 1 
-                ? "Es opción 1" 
-                : "No es opción 1";
+            //string[] diasDeLaSemana = new string[] {"Lunes", "Martes"};
+            //Vehiculo[] listaDeVehiculos = new Vehiculo[2];
 
-            //return opcion == 1 ? "Es opción 1" : "No es opción 1";
-            //return opcion == 1 || opcion == 2 ? "Es opción 1" : "No es opción 1";
+            List<Vehiculo> vehiculos = new List<Vehiculo>();
 
-            Console.WriteLine(mensaje);
+            var turismo = new Turismo();
+            turismo.Matricula = "0000AAA";
+            turismo.Modelo = "Toyota Celica";
 
-            var vehiculo = new Vehiculo(80);
-            Console.WriteLine("Mi límite de velocidad es: " + vehiculo.LimiteMaximoDeVelocidad);
-            vehiculo = new Turismo();
-            Console.WriteLine("Mi nuevo límite de velocidad es: " + vehiculo.LimiteMaximoDeVelocidad);
+            vehiculos.Add(turismo);
 
-            Vehiculo[] vehiculos = new Vehiculo[2];
-            vehiculos[0] = new Camion();
-            vehiculos[1] = new Turismo();
+            var segundoTurismo = new Turismo() {
+                Matricula = "0001BBB",
+                Modelo = "Lancia Stratos"
+            };
 
-            vehiculos[0].Matricula = "0000AAA";
-            Console.WriteLine("La matrícula es: " + vehiculos[0].Matricula);
-            
-            //Cast -> Conversión de un tipo genérico a un tipo específico
-            Camion camion = (Camion)vehiculos[0];
-            camion.CapacidadDeCarga = 1000;
-            Console.WriteLine("La capacidad de carga es: " + camion.CapacidadDeCarga);
+            vehiculos.Add(segundoTurismo);
+
+            vehiculos.Add(new Camion() { Matricula = "0002CCC" });
+
+            foreach(var vehiculo in vehiculos)
+            {
+                EscribirVehiculo(vehiculo);
+            }
 
             Console.ReadLine();
         }
-    }
+
+        public static void EscribirVehiculo(Vehiculo vehiculo)
+        {
+            Console.WriteLine("Vehiculo con matricula: " + vehiculo.Matricula);
+            Console.WriteLine("Del tipo: " + vehiculo.Tipo);
+        }
+        
+    }    
     
 }
