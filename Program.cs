@@ -1,46 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace consola
 {
+    enum CaraOCruz
+    {
+        Cara,
+        Cruz,
+        DeCanto
+    }
     class Program
     {
-        const string MENSAJE_INICIAL = "Este es el número de entrada: ";
-        const int NUMERO_ENTRADA_INICIAL = 1;
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
-            //string[] diasDeLaSemana = new string[] {"Lunes", "Martes"};
-            //Vehiculo[] listaDeVehiculos = new Vehiculo[2];
+            var moneda = new Random();
+            CaraOCruz tiradaDeMoneda = (CaraOCruz)moneda.Next(0, 2);
+            Console.WriteLine($"¿{CaraOCruz.Cara} (0) o {CaraOCruz.Cruz} (1)?");
+            CaraOCruz opcionUsuario = (CaraOCruz)Int32.Parse(Console.ReadLine());
 
-            List<Vehiculo> vehiculos = new List<Vehiculo>();
-
-            var turismo = new Turismo();
-            turismo.Matricula = "0000AAA";
-            turismo.Modelo = "Toyota Celica";
-
-            vehiculos.Add(turismo);
-
-            var segundoTurismo = new Turismo() {
-                Matricula = "0001BBB",
-                Modelo = "Lancia Stratos"
-            };
-
-            vehiculos.Add(segundoTurismo);
-
-            vehiculos.Add(new Camion() { Matricula = "0002CCC" });
-
-            foreach(var vehiculo in vehiculos)
+            if (opcionUsuario == tiradaDeMoneda)
             {
-                EscribirVehiculo(vehiculo);
+                Console.WriteLine($"¡¡Ha acertado!!, ha salido {tiradaDeMoneda}");                 
+            }
+            else
+            {
+                Console.WriteLine($"Ha fallado, la moneda ha salido {tiradaDeMoneda}");
+            }
+
+            foreach( var name in Enum.GetNames(tiradaDeMoneda.GetType()))
+            {
+                Console.WriteLine(name);
             }
 
             Console.ReadLine();
-        }
-
-        public static void EscribirVehiculo(Vehiculo vehiculo)
-        {
-            Console.WriteLine("Vehiculo con matricula: " + vehiculo.Matricula);
-            Console.WriteLine("Del tipo: " + vehiculo.Tipo);
         }
         
     }    
