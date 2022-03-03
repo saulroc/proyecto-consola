@@ -1,3 +1,5 @@
+using IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos;
+
 public class Camion : Vehiculo
 {
     public int CapacidadDeCarga { get; set; }

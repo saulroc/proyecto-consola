@@ -1,6 +1,6 @@
 using System;
 
-namespace consola
+namespace IESPeñasNegras.ProyectoEjemplo.Consola.Clases
 {
     public class MiSegundaClase
     {
