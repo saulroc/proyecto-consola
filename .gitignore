@@ -1,2 +1,4 @@
 bin/
 obj/
+obj/Debug/netcoreapp3.1/consola.assets.cache
+obj/Debug/netcoreapp3.1/consola.GeneratedMSBuildEditorConfig.editorconfig
