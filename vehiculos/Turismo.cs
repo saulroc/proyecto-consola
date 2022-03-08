@@ -7,5 +7,10 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
         {
             Tipo = nameof(Turismo);
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $", Modelo: {Modelo}";
+        }
     }
 }

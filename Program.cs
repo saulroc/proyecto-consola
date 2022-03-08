@@ -1,4 +1,5 @@
 ﻿using System;
+using IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola
 {
@@ -7,20 +8,14 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola
     {
          static void Main(string[] args)
         {
-            //declaración e instancia de las variables
-            var fechaActual = DateTime.Now;
-            var fecha = new DateTime(1992, 10, 13);
-            
-            //uso de método
-            Console.WriteLine(fechaActual.AddYears(-10));
-            //fechaActual = fechaActual.AddYears(-10);
-            //Propiedad Date
-            Console.WriteLine(fechaActual.Date);
-            Console.WriteLine(fechaActual.Date.ToString("dd-MM-yyyy"));
-            
-            //Parte time
-            Console.WriteLine(fechaActual.TimeOfDay);
+            var coche = new Turismo();
+            coche.Matricula = "0000AAA";
+            Console.WriteLine(coche);
 
+            var camion = new Camion();
+            camion.Matricula = "1111BBB";
+            Console.WriteLine(camion);
+            Console.WriteLine(camion.Ruedas.Count);
             Console.ReadLine();
         }
         

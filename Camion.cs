@@ -7,4 +7,10 @@ public class Camion : Vehiculo
     {
         Tipo = nameof(Camion);
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $", Capacidad de carga: {CapacidadDeCarga}";
+    }
+    
 }
