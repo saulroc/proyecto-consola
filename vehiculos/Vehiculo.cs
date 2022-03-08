@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
 {
@@ -7,6 +8,7 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
         public string Matricula { get; set; }
         public string Tipo { get; set; }
         public int LimiteMaximoDeVelocidad { get; }
+        public List<Rueda> Ruedas { get; set; }
 
         public Vehiculo(int limiteMaximoDeVelocidad)
         {
