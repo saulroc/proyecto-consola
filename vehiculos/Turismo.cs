@@ -1,3 +1,5 @@
+using System;
+
 namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
 {
     public class Turismo : Vehiculo
@@ -11,6 +13,11 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
         public override string ToString()
         {
             return base.ToString() + $", Modelo: {Modelo}";
+        }
+
+        public override void Mover()
+        {
+            Console.WriteLine("Moviendo un turismo");
         }
     }
 }

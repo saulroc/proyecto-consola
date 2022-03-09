@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
 {
-    public class Vehiculo
+    public abstract class Vehiculo
     {
+        public int Id { get; set; }
         public string Matricula { get; set; }
         public string Tipo { get; set; }
         public int LimiteMaximoDeVelocidad { get; }
@@ -20,10 +21,7 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
             Console.WriteLine("Bron, Bron!...");
         }
 
-        public void Mover()
-        {
-
-        }
+        public abstract void Mover();
 
         public void Mover(int metros)
         {

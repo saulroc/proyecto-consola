@@ -8,6 +8,8 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola
     {
          static void Main(string[] args)
         {
+            //Vehiculo vehiculo = new Vehiculo(60);
+
             var coche = new Turismo();
             coche.Matricula = "0000AAA";
             Console.WriteLine(coche);
