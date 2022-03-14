@@ -1,5 +1,5 @@
 ﻿using System;
-using IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos;
+using IESPeñasNegrreturnas.ProyectoEjemplo.Consola.Extensions;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola
 {
@@ -8,25 +8,19 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola
     {
          static void Main(string[] args)
         {
-            //Vehiculo vehiculo = new Vehiculo(60);
+            string miMensaje = "¡Hola mundo!";
 
-            var coche = new Turismo();
+            Console.WriteLine($"El mensaje tiene {miMensaje.ContarPalabras()} palabras");
+            System.Console.WriteLine("Introduzca un mensaje:");
+            miMensaje = Console.ReadLine();
+            Console.WriteLine("El mensaje tiene {0} palabras", miMensaje.ContarPalabras());
             
-            Console.WriteLine(coche);
-            ArrancarYMover(coche);
-
-            var camion = new Camion();
-            Console.WriteLine(camion);
-            ArrancarYMover(camion);
-            
+            System.Console.WriteLine("Introduzca un texto a añadir:");
+            string mensajeMasTexto = miMensaje.AñadirTexto(Console.ReadLine());
+            Console.WriteLine("El mensaje con el texto añadido tiene {0} palabras", mensajeMasTexto.ContarPalabras());
+            Console.WriteLine("El mensaje es " + mensajeMasTexto);
             Console.ReadLine();
-        }
-
-        static void ArrancarYMover(IVehiculo vehiculo)
-        {
-            vehiculo.Arrancar();
-            vehiculo.Mover();
-        }
+        }        
         
     }    
     
