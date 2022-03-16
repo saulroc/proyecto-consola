@@ -16,7 +16,7 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
 
         public override string ToString()
         {
-            return base.ToString() + $", Modelo: {Modelo}";
+            return $"Modelo: {Modelo}";
         }
 
         public void Mover()
