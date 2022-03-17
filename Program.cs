@@ -1,51 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos;
-using IESPeñasNegrreturnas.ProyectoEjemplo.Consola.Extensions;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola
 {
 
     class Program
     {
-         static async void Main(string[] args)
+         static void Main(string[] args)
         {
             List<Turismo> turismos = new List<Turismo>() {
-                new Turismo() { Modelo = "Seat" },
-                new Turismo() { Modelo = "Peugeot" },
-                new Turismo() { Modelo = "Opel"}
+                new Turismo(1) { Modelo = "Seat" },
+                new Turismo(2) { Modelo = "Peugeot" },
+                new Turismo(3) { Modelo = "Opel"},
+                new Turismo(4) { Modelo = "Seat"}
             };
 
-            turismos.Find(EncontrarPeugeot);
-            
-            Func<Turismo, bool> encontrarTodos = t => t.Modelo == "Peugeot";
-            //turismos.FindAll(encontrarTodos);
-            turismos.FindAll(t => t.Modelo == "Peugeot" || t.Modelo == "Seat");
-            
-            Func<int, int> square = x => x * x;
-            Console.WriteLine(square(5));
+            foreach(var turismo in turismos.Where(t => t.Id > 1))
+            {
+                System.Console.WriteLine(turismo);
+            }
+
+            foreach(var turismo in turismos.Where(t => t.Modelo == "Seat"))
+            {
+                System.Console.WriteLine(turismo);
+            }
             
             Console.ReadLine();
-        }  
-
-        public static bool EncontrarPeugeot(Turismo turismo)
-        {
-            // if (turismo.Modelo == "Peugeot")
-            // {
-            //     return true;
-            // }
-            // else 
-            // {
-            //     return false;
-            // }
-            Console.WriteLine(turismo);
-            return turismo.Modelo == "Peugeot";
-        }
-
-        public static void QuitarOjosRojos(Foto foto)    
-        {
-            System.Console.WriteLine("Quitando ojos rojos");
-        }  
+        }   
         
     }    
     
