@@ -8,15 +8,16 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
         public int Id { get; set; }
         public string Tipo { get; set; }
         public string Modelo { get; set; }
-        public Turismo()
+        public Turismo(int id)
         {
+            Id = id;
             Tipo = nameof(Turismo);
             LimiteMaximoDeVelocidad = 120;
         }
 
         public override string ToString()
         {
-            return $"Modelo: {Modelo}";
+            return $"Id: {Id}, Modelo: {Modelo}";
         }
 
         public void Mover()
