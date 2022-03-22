@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola
@@ -10,23 +11,14 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola
     {
          static void Main(string[] args)
         {
-            List<Turismo> turismos = new List<Turismo>() {
-                new Turismo(1) { Modelo = "Seat" },
-                new Turismo(2) { Modelo = "Peugeot" },
-                new Turismo(3) { Modelo = "Opel"},
-                new Turismo(4) { Modelo = "Seat"}
-            };
-
-            foreach(var turismo in turismos.Where(t => t.Id > 1).Select(t => new { Modelo = t.Modelo, Limite = t.LimiteMaximoDeVelocidad } ))
+          
+            List<Task> tareas = new List<Task>();
+            for(var i = 0; i <10; i++)
             {
-                System.Console.WriteLine(turismo);
+                var tarea = new Tarea($"Tarea {i+1}");
+                tareas.Add(tarea.EjecutarTarea());
             }
-
-            foreach(var turismo in turismos.Where(t => t.Modelo == "Seat"))
-            {
-                System.Console.WriteLine(turismo);
-            }
-            
+            Task.WaitAll(tareas.ToArray());
             Console.ReadLine();
         }   
         
