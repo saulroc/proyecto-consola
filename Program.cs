@@ -17,7 +17,7 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola
                 new Turismo(4) { Modelo = "Seat"}
             };
 
-            foreach(var turismo in turismos.Where(t => t.Id > 1))
+            foreach(var turismo in turismos.Where(t => t.Id > 1).Select(t => new { Modelo = t.Modelo, Limite = t.LimiteMaximoDeVelocidad } ))
             {
                 System.Console.WriteLine(turismo);
             }
