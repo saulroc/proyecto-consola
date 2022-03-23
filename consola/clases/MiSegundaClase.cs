@@ -17,12 +17,13 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Clases
         public int NumeroEntrada { get; set; }
         public string Mensaje { get; set; }
 
-        public void Incremetar()
+        public void Incrementar()
         {
             if (NumeroEntrada >= 0)
             {
                 NumeroEntrada++;
             }
+
         }
 
         public void PintarLetras()
