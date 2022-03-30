@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
 {
@@ -8,11 +9,13 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola.Vehiculos
         public int Id { get; set; }
         public string Tipo { get; set; }
         public string Modelo { get; set; }
+        public List<Rueda> Ruedas { get; set; }
         public Turismo(int id)
         {
             Id = id;
             Tipo = nameof(Turismo);
             LimiteMaximoDeVelocidad = 120;
+            Ruedas = new List<Rueda>();
         }
 
         public override string ToString()
