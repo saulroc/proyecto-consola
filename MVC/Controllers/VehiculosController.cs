@@ -15,7 +15,13 @@ namespace MVC.Controllers
 
             var vehiculo3 = new Vehiculo() { Id = 3, Name = "Ford Focus" };
 
-            return View(vehiculo);
+           // return View(vehiculo);
+            return this.Redirect("/home");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            return Content("ID: " + id);
         }
     }
 }
