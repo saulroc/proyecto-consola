@@ -12,13 +12,12 @@ namespace IESPeñasNegras.ProyectoEjemplo.Consola
          static void Main(string[] args)
         {
           
-            List<Task> tareas = new List<Task>();
-            for(var i = 0; i <10; i++)
+            using(var dbContext = new VehiculosContext())
             {
-                var tarea = new Tarea($"Tarea {i+1}");
-                tareas.Add(tarea.EjecutarTarea());
+                System.Console.WriteLine("Insertando un turismo");
+                dbContext.Add(new Turismo(default) { Modelo = "Ford Focus"});
+                dbContext.SaveChanges();
             }
-            Task.WaitAll(tareas.ToArray());
             Console.ReadLine();
         }   
         
